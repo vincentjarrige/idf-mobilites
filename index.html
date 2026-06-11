@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#ffffff" />
   <title>IDF Mobilités</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
 <div id="app">
@@ -141,7 +141,7 @@
           <span class="hero-subtitle">Connectez-vous !</span>
           <span class="hero-desc">Profitez des services et fonctionnalités de mon espace île-de-France Mobilité</span>
         </div>
-        <button class="hero-btn">
+        <button class="hero-btn" onclick="showPage('page-connexion')">
           <span>Me connecter / m'inscrire</span>
         </button>
       </div>
@@ -151,7 +151,7 @@
 
         <!-- Je me fais contrôler -->
         <div class="row-card">
-          <div class="controle-row">
+          <div class="controle-row row-item-clickable" onclick="showPage('page-connexion')" role="button">
             <div class="controle-left">
               <img class="controle-icon" src="img/controle-icon.png" alt="" />
               <span class="row-label row-label-bold">Je me fais contrôler</span>
@@ -164,7 +164,7 @@
         <div>
           <p class="section-title" style="padding:0 0 8px;">Mes contrats sur mon téléphone</p>
           <div class="row-card">
-            <div class="navigo-row">
+            <div class="navigo-row row-item-clickable" onclick="showPage('page-connexion')" role="button">
               <div class="navigo-left">
                 <img class="navigo-img" src="img/navigo-card.png" alt="" />
                 <span class="row-label row-label-bold">Navigo Liberté +</span>
@@ -426,7 +426,69 @@
     </button>
   </nav>
 
+  <!-- ═══════════ PAGE 4 — CONNEXION ═══════════ -->
+  <div id="page-connexion" class="page">
+    <div class="page-scroll">
+
+      <!-- Header avec retour -->
+      <div class="header">
+        <button class="header-back-btn" onclick="showPage('page-mon-espace')">
+          <img src="img/cx-back-arrow.png" alt="Retour" />
+          <span>Me connecter / Créer mon compte</span>
+        </button>
+      </div>
+
+      <div class="cx-content">
+
+        <!-- Langue + logos -->
+        <div class="cx-logos-block">
+          <img class="cx-langue" src="img/cx-langue.png" alt="Français" />
+          <img class="cx-connect-logo" src="img/cx-real-connect.png" alt="IDF Mobilités Connect" />
+          <p class="cx-tagline">Le compte qui facilite vos déplacements en île-de-France</p>
+        </div>
+
+        <!-- Card connexion -->
+        <div class="cx-card">
+          <p class="cx-card-title">Je me connecte</p>
+
+          <div class="cx-field-group">
+            <label class="cx-label">ADRESSE E-MAIL</label>
+            <input class="cx-input" type="email" autocomplete="email" />
+          </div>
+
+          <div class="cx-field-group">
+            <label class="cx-label">MOT DE PASSE</label>
+            <div class="cx-input-wrap">
+              <input class="cx-input cx-input-pw" type="password" autocomplete="current-password" id="cx-pw-input" />
+              <button class="cx-eye-btn" onclick="togglePassword()" type="button">
+                <img src="img/cx-real-eye.png" alt="Voir" />
+              </button>
+            </div>
+          </div>
+
+          <div class="cx-links">
+            <a href="#" class="cx-link">Mot de passe oublié</a>
+            <a href="#" class="cx-link">Je n'arrive pas à me connecter</a>
+          </div>
+
+          <button class="cx-btn-connexion" type="button">Connexion</button>
+        </div>
+
+        <!-- Card inscription -->
+        <div class="cx-card">
+          <p class="cx-card-title">Pas encore de compte ?</p>
+          <div class="cx-couple-wrap">
+            <img class="cx-couple" src="img/cx-real-couple.png" alt="" />
+          </div>
+          <p class="cx-inscription-text">Créez en quelques clics votre compte île-de-France Mobilité Connect afin de gérer simplement vos abonnements et vos préférences de déplacement.</p>
+          <button class="cx-btn-creer" type="button">Je crée mon compte</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </div>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>
