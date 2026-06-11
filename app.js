@@ -1,5 +1,5 @@
 // Pages qui cachent la bottom nav
-const PAGES_WITHOUT_NAV = ['page-validations'];
+const PAGES_WITHOUT_NAV = ['page-validations', 'page-connexion'];
 
 // Navigation entre pages
 function showPage(id) {
@@ -27,6 +27,12 @@ function showPage(id) {
   // Remonter en haut de la page
   const scroll = document.querySelector(`#${id} .page-scroll`);
   if (scroll) scroll.scrollTop = 0;
+}
+
+// Afficher/masquer le mot de passe
+function togglePassword() {
+  const input = document.getElementById('cx-pw-input');
+  if (input) input.type = input.type === 'password' ? 'text' : 'password';
 }
 
 // Fermer la bannière info
