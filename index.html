@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="IDF Mobilités" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>IDF Mobilités</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+<div id="app">
+
+  <!-- ══════════════════════════════════════
+       PAGE 1 — TITRES
+  ══════════════════════════════════════ -->
+  <div id="page-titres" class="page active">
+
+    <!-- Sticky header -->
+    <div class="header">
+      <span class="header-title">Titres</span>
+      <img class="header-icon" src="img/help-icon.png" alt="Aide" />
+    </div>
+
+    <div class="page-scroll">
+
+      <!-- Section Transports en commun -->
+      <div class="section">
+        <p class="section-title">Transports en commun</p>
+      </div>
+
+      <!-- Info banner -->
+      <div class="banner" id="banner-nfc">
+        <div class="banner-icon-wrap">
+          <img src="img/info-icon.png" alt="" />
+        </div>
+        <div class="banner-text">
+          <strong>Pour utiliser vos titres dématérialisés, pensez à :</strong>
+          - Activer votre NFC,<br>
+          - Présenter votre téléphone avec l'écran allumé lors des validations et des contrôles.
+        </div>
+        <div class="banner-close-wrap" onclick="dismissBanner('banner-nfc')" role="button" aria-label="Fermer">
+          <img src="img/close-icon.png" alt="Fermer" />
+        </div>
+      </div>
+
+      <!-- Sur mon téléphone -->
+      <div class="section">
+        <div class="illus-card">
+          <div class="illus-row">
+            <div class="illus-text">
+              <span class="illus-text-title">Sur mon téléphone</span>
+              <span class="illus-text-desc">Achetez et validez vos titres avec votre téléphone</span>
+            </div>
+            <img class="illus-img" src="img/phone-tele.png" alt="" />
+          </div>
+          <div class="illus-divider"></div>
+          <div class="ticket-section">
+            <div class="ticket-row">
+              <div class="ticket-row-left">
+                <img src="img/ticket-bustram.png" alt="" />
+                <span>Ticket Bus-Tram</span>
+              </div>
+              <div class="ticket-row-right">
+                <span class="ticket-qty-label">Quantité :</span>
+                <div class="ticket-badge">3</div>
+              </div>
+            </div>
+            <button class="buy-btn">
+              <span>Acheter un titre</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sur mon passe Navigo -->
+      <div class="section">
+        <div class="illus-card">
+          <div class="illus-row">
+            <div class="illus-text">
+              <span class="illus-text-title">Sur mon passe Navigo</span>
+              <span class="illus-text-desc">Achetez et rechargez vos titres sur votre passe Navigo depuis votre téléphone.</span>
+            </div>
+            <img class="illus-img" src="img/navigo-pass.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigo Liberté+ -->
+      <div class="section">
+        <div class="illus-card">
+          <div class="illus-row">
+            <div class="illus-text">
+              <span class="illus-text-title">Navigo Liberté +</span>
+              <span class="illus-text-desc">Tous vos trajets sur votre téléphone</span>
+            </div>
+            <img class="illus-img" src="img/navigo-liberte.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Autres services partenaires -->
+      <div class="section">
+        <p class="section-title">Autres services partenaires</p>
+        <div class="illus-card">
+          <div class="illus-row">
+            <div class="illus-text">
+              <span class="illus-text-title">Se déplacer autrement</span>
+              <span class="illus-text-desc">Réservez ou achetez des services de mobilité complémentaires</span>
+            </div>
+            <img class="illus-img" src="img/deplacement.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Provider note -->
+      <div class="provider-note" style="margin-top:16px;">
+        <p>Ce service est fourni par</p>
+        <img src="img/idf-logo.png" alt="Île-de-France mobilités" />
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 2 — MON ESPACE
+  ══════════════════════════════════════ -->
+  <div id="page-mon-espace" class="page">
+    <div class="page-scroll">
+
+      <!-- Hero header -->
+      <div class="hero">
+        <img class="hero-connect-logo" src="img/connect-logo.png" alt="IDF Connect" />
+        <div class="hero-text">
+          <span class="hero-title">Mon espace</span>
+          <span class="hero-subtitle">Connectez-vous !</span>
+          <span class="hero-desc">Profitez des services et fonctionnalités de mon espace île-de-France Mobilité</span>
+        </div>
+        <button class="hero-btn">
+          <span>Me connecter / m'inscrire</span>
+        </button>
+      </div>
+
+      <!-- Content -->
+      <div class="p2-content">
+
+        <!-- Je me fais contrôler -->
+        <div class="row-card">
+          <div class="controle-row">
+            <div class="controle-left">
+              <img class="controle-icon" src="img/controle-icon.png" alt="" />
+              <span class="row-label row-label-bold">Je me fais contrôler</span>
+            </div>
+            <img class="row-arrow" src="img/arrow-icon.png" alt="" />
+          </div>
+        </div>
+
+        <!-- Mes contrats sur mon téléphone -->
+        <div>
+          <p class="section-title" style="padding:0 0 8px;">Mes contrats sur mon téléphone</p>
+          <div class="row-card">
+            <div class="navigo-row">
+              <div class="navigo-left">
+                <img class="navigo-img" src="img/navigo-card.png" alt="" />
+                <span class="row-label row-label-bold">Navigo Liberté +</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Mes services -->
+        <div>
+          <p class="section-title" style="padding:0 0 8px;">Mes services</p>
+          <div class="services-grid">
+            <div class="service-tile"><img src="img/service-velib.png" alt="Vélib'" /></div>
+            <div class="service-tile"><img src="img/service-veligo.png" alt="Véligo Location" /></div>
+            <div class="service-tile"><img src="img/service-parking.png" alt="Parking Vélos" /></div>
+          </div>
+          <div class="discover-row">
+            <span>Découvrir les services</span>
+            <img class="row-arrow" src="img/arrow-small.png" alt="" />
+          </div>
+        </div>
+
+        <!-- Mes titres et justificatifs -->
+        <div>
+          <p class="section-title" style="padding:0 0 8px;">Mes titres et justificatifs</p>
+          <div class="row-card">
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-justificatifs.png" alt="" />
+                <span class="row-label">Mes justificatifs d'achats</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-titres.png" alt="" />
+                <span class="row-label">Gérer mes titres</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-forfaits.png" alt="" />
+                <span class="row-label">Gérer mes forfaits</span>
+              </div>
+              <img class="row-arrow-lg" src="img/icon-external.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Mes déplacements -->
+        <div>
+          <p class="section-title" style="padding:0 0 8px;">Mes déplacements</p>
+          <div class="row-card">
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-favoris.png" alt="" />
+                <span class="row-label">Mes favoris</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+            <div class="row-item row-item-clickable" onclick="showPage('page-validations')" role="button">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-validations.png" alt="" />
+                <span class="row-label">Mes dernières validations</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Paramètres -->
+        <div>
+          <p class="section-title" style="padding:0 0 8px;">Paramètres</p>
+          <div class="row-card">
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-alertes.png" alt="" />
+                <span class="row-label">Mes alertes &amp; notifications</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-langue.png" alt="" />
+                <span class="row-label">Langue et accessibilité</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-ia.png" alt="" />
+                <span class="row-label">Intelligence Artificielle</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-lab.png" alt="" />
+                <span class="row-label">Le Lab</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Besoin d'aide ? -->
+        <div>
+          <p class="section-title" style="padding:0 0 8px;">Besoin d'aide ?</p>
+          <div class="row-card">
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-serviceclient.png" alt="" />
+                <span class="row-label">Service client</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-sav.png" alt="" />
+                <span class="row-label">Localiser un point de SAV</span>
+              </div>
+              <img class="row-arrow" src="img/arrow-small.png" alt="" />
+            </div>
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-faq.png" alt="" />
+                <span class="row-label">Questions fréquentes</span>
+              </div>
+              <img class="row-arrow-lg" src="img/icon-external.png" alt="" />
+            </div>
+            <div class="row-item">
+              <div class="row-left">
+                <img class="row-icon" src="img/icon-agentia.png" alt="" />
+                <span class="row-label">Poser une question à l'agent IA</span>
+              </div>
+              <img class="row-arrow-lg" src="img/icon-external.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer links -->
+        <div class="footer-section">
+          <div class="footer-link-row">
+            <a href="#">Donnez-nous votre avis</a>
+            <img src="img/icon-link.png" alt="" />
+          </div>
+          <div class="footer-link-row">
+            <a href="#">Crédits</a>
+            <img src="img/icon-link.png" alt="" />
+          </div>
+          <div class="footer-link-row">
+            <a href="#">Mentions légales</a>
+            <img src="img/icon-link.png" alt="" />
+          </div>
+          <div class="footer-link-row">
+            <a href="#">Confidentialité</a>
+            <img src="img/icon-link.png" alt="" />
+          </div>
+          <div class="footer-link-row">
+            <a href="#">Accessibilité : partiellement conforme</a>
+            <img src="img/icon-link-ext.png" alt="" />
+          </div>
+          <p class="footer-version">Île-de-France Mobilité / 9.8.0-4310</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 3 — MES DERNIÈRES VALIDATIONS
+  ══════════════════════════════════════ -->
+  <div id="page-validations" class="page">
+
+    <!-- Sticky header with back -->
+    <div class="header">
+      <button class="header-back-btn" onclick="showPage('page-mon-espace')" aria-label="Retour">
+        <img src="img/back-arrow.png" alt="Retour" />
+        <span>Mes dernières validations</span>
+      </button>
+    </div>
+
+    <div class="page-scroll">
+      <div class="validations-list">
+
+        <!-- Validation 1 -->
+        <div class="val-card">
+          <p class="val-date" id="val-date-recent"></p>
+          <div class="val-divider"></div>
+          <div class="val-row">
+            <img class="val-icon" src="img/ticket-colored.png" alt="" style="width:41px;height:47px;" />
+            <div class="val-info">
+              <span class="val-type">Ticket Bus-Tram</span>
+              <span class="val-line">Bus - Entrée</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Validation 2 -->
+        <div class="val-card">
+          <p class="val-date">Le 28/05/2026 à 18h38</p>
+          <div class="val-divider"></div>
+          <div class="val-row">
+            <img class="val-icon" src="img/ticket-bw.png" alt="" style="width:43px;height:50px;" />
+            <div class="val-info">
+              <span class="val-type">Bus - Entrée</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Validation 3 -->
+        <div class="val-card">
+          <p class="val-date">Le 26/05/2026 à 17h21</p>
+          <div class="val-divider"></div>
+          <div class="val-row">
+            <img class="val-icon" src="img/ticket-bw.png" alt="" style="width:43px;height:50px;" />
+            <div class="val-info">
+              <span class="val-type">RER/Train - Entrée</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       BOTTOM NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav class="bottom-nav">
+    <button class="nav-btn" onclick="showPage('page-titres')" aria-label="Itinéraires">
+      <img src="img/nav-itineraires.png" alt="" class="icon-inactive" />
+      <img src="img/nav-itineraires.png" alt="" class="icon-active" />
+      <span>Itinéraires</span>
+    </button>
+    <button class="nav-btn" onclick="showPage('page-titres')" aria-label="Horaires">
+      <img src="img/nav-horaires.png" alt="" class="icon-inactive" />
+      <img src="img/nav-horaires.png" alt="" class="icon-active" />
+      <span>Horaires</span>
+    </button>
+    <button class="nav-btn" onclick="showPage('page-titres')" aria-label="Infos trafic">
+      <img src="img/nav-trafic.png" alt="" class="icon-inactive" />
+      <img src="img/nav-trafic.png" alt="" class="icon-active" />
+      <span>Infos trafic</span>
+    </button>
+    <button class="nav-btn active" data-page="page-titres" onclick="showPage('page-titres')" aria-label="Titres">
+      <img src="img/nav-titres.png" alt="" class="icon-inactive" />
+      <img src="img/nav-titres-active.png" alt="" class="icon-active" />
+      <span>Titres</span>
+    </button>
+    <button class="nav-btn" data-page="page-mon-espace" onclick="showPage('page-mon-espace')" aria-label="Mon espace">
+      <img src="img/nav-monespace.png" alt="" class="icon-inactive" />
+      <img src="img/nav-monespace-active.png" alt="" class="icon-active" />
+      <span>Mon espace</span>
+    </button>
+  </nav>
+
+</div>
+<script src="app.js?v=3"></script>
+</body>
+</html>
