@@ -450,6 +450,137 @@ html, body {
 }
 
 /* ═══════════════════════════
+   PAGE 4 — CONNEXION
+═══════════════════════════ */
+.cx-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 16px 32px;
+}
+
+.cx-logos-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.cx-langue { height: 20px; width: auto; max-width: 100px; object-fit: contain; }
+.cx-idf-logo { height: 32px; width: auto; max-width: 160px; object-fit: contain; }
+.cx-connect-logo { height: 40px; width: auto; max-width: 180px; object-fit: contain; }
+.cx-tagline {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.cx-card {
+  background: var(--white);
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cx-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #25303b;
+}
+
+.cx-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cx-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+}
+.cx-input {
+  height: 42px;
+  border: 1px solid var(--text-light);
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: var(--text-dark);
+  background: var(--white);
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
+.cx-input:focus { border-color: var(--blue); }
+.cx-input-wrap { position: relative; }
+.cx-input-pw { padding-right: 44px; }
+.cx-eye-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.cx-eye-btn img { width: 24px; height: 24px; object-fit: contain; max-width: 24px; }
+
+.cx-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cx-link {
+  font-size: 14px;
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.cx-btn-connexion {
+  height: 46px;
+  background: #53606e;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+.cx-btn-connexion:active { opacity: 0.85; }
+
+.cx-couple-wrap {
+  display: flex;
+  justify-content: center;
+}
+.cx-couple { height: 130px; width: auto; object-fit: contain; }
+
+.cx-inscription-text {
+  font-size: 15px;
+  font-weight: 300;
+  color: #25303b;
+  line-height: 1.7;
+}
+
+.cx-btn-creer {
+  height: 46px;
+  background: transparent;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+.cx-btn-creer:active { background: #eef4ff; }
+
+/* ═══════════════════════════
    BOTTOM NAV
 ═══════════════════════════ */
 .bottom-nav {
